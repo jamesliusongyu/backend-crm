@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  shipments.db:
+    image: mongodb/mongodb-community-server:latest
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=root
+      - MONGODB_INITDB_ROOT_PASSWORD=Password123
+      - MONGO_INITDB_DATABASE=Shipments
+    volumes:
+      - shipments_db_data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  shipments_db_data:

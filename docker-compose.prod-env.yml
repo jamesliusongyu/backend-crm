@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Password123
+      MONGO_INITDB_DATABASE: Shipments
+    ports:
+      - "27017:27017"
+    volumes:
+      - columbus_crm_db_data:/data/db
+
+  app:
+    build: .
+    container_name: columbus-crm
+    environment:
+      DATABASE_URL: mongodb://root:Password123@mongo:27017
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+
+volumes:
+  columbus_crm_db_data:

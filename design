@@ -1,0 +1,17 @@
+It's generally better to initialize the handlers during server creation rather than within the routes setup. This approach promotes cleaner code separation and improves the readability and maintainability of the server setup.
+
+Benefits of This Approach
+
+Separation of Concerns: Handlers are created and initialized separately from the route definitions, making the code easier to read and maintain.
+Reusability: Handlers can be reused across different routes without needing to reinitialize them.
+Testability: This structure makes it easier to write unit tests for individual handlers and routes.
+Configuration Management: The server configuration and handlers are initialized together, making it easier to manage dependencies and configurations in one place.
+
+You can certainly use ctx := context.Background() if you don't need the ability to cancel the context. However, using context.WithCancel gives you the ability to propagate the cancellation signal to all operations that are using that context. This can be useful for graceful shutdown, ensuring that all background tasks, database operations, and network requests are properly terminated.
+
+Reason why we choose to implement master email messages as individual records and not update each master email as a payload in a record is because the latter will have an extremely long and un-readable payload (assuming total master emails per shipment are between 30-50 emails)
+
+For the parsing of status from the master email, we decided to go with event-processing mechanism such as AWS Lambda. Reason is because reasonably simple to implement. Other more complicated alternatives include a pub sub messaging system such as RabbitMQ or Kafka, however, that required another service (more complexity), and since we do not need that throughput, we can use something simple like Lambda. However, after testing, do it in the code instead actually.
+
+We use both sessions (server maintains state) and jwt token (client maintains) -> we need to implement session revoke and permission control using jwt token
+https://dev.to/titre123/creating-a-robust-authentication-system-harnessing-the-power-of-jwt-and-session-authentication-2efc

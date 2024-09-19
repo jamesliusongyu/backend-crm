@@ -1,0 +1,161 @@
+{
+  "cargo_operations":{
+      "1": 8,
+      "2":8.5,
+      "3":9,
+      "4":9.5,
+      "5":12.5,
+      "6":15.5,
+      "7":18.5,
+      "8": 21.5,
+      "9":24.5,
+      "10":27.5,
+      "11":33.5,
+      "12":39.5,
+      "13":45.5,
+      "14":51.5,
+      "15":57.5,
+      "16":63.5,
+      "17":69.5,
+      "18":75.5,
+      "19":81.5,
+      "20":87.5,
+      "21":99.5,
+      "22":111.5,
+      "23":123.5,
+      "24":135.5,
+      "25":147.5,
+      "26":159.5,
+      "27":171.5,
+      "28":183.5,
+      "29":195.5,
+      "30":207.5,
+      "31":225.5,
+      "32":243.5,
+      "33":261.5,
+      "34":279.5,
+      "35":297.5
+  },
+  "bunkering":{
+      "1": 2,
+      "2":6,
+      "3":9,
+      "4":9.5,
+      "5":12.5,
+      "6":15.5,
+      "7":18.5,
+      "8": 21.5,
+      "9":24.5,
+      "10":27.5
+  },
+  "pilotage": [
+  {
+    "min": 0,
+    "max": 6000,
+    "value": 227
+  },
+  {
+    "min": 6001,
+    "max": 12000,
+    "value": 251.5
+  },
+  {
+    "min": 12001,
+    "max": 20000,
+    "value": 277
+  },
+  {
+    "min": 20001,
+    "max": 30000,
+    "value": 315
+  },
+  {
+    "min": 30001,
+    "max": 40000,
+    "value": 352.5
+  },
+  {
+    "min": 40001,
+    "max": 50000,
+    "value": 390
+  },
+  {
+    "min": 50001,
+    "max": 60000,
+    "value": 427.5
+  },
+  {
+    "min": 60001,
+    "max": 70000,
+    "value": 465
+  },
+  {
+    "min": 70001,
+    "max": 80000,
+    "value": 501
+  },
+  {
+    "min": 80001,
+    "max": 90000,
+    "value": 537
+  },
+  {
+    "min": 90001,
+    "max": 100000,
+    "value": 573
+  },
+  {
+    "min": 100001,
+    "max": 110000,
+    "value": 609
+  },
+  {
+    "min": 110001,
+    "max": 120000,
+    "value": 645
+  },
+  {
+    "min": 120001,
+    "max": 130000,
+    "value": 681
+  },
+  {
+    "min": 130001,
+    "max": 140000,
+    "value": 681
+  },
+  {
+    "min": 140001,
+    "max": 10000000,
+    "value": 681
+  }],
+  "service_launch" : {
+      "hourlyRate":250
+  },
+  "towage":{
+      "1":23,
+      "2":49
+  },
+  "mooring":{
+      "terminal A" : 1200,
+      "terminal B" : 2200,
+      "Jurong Port Universal Terminal" : 5001,
+      "default":1000
+  },
+  "agency_fee":{
+      "fees":10000
+  },
+  "invoice_bank_details": {
+      "bank_name": "UOB Upper Bukit Timah",
+      "swift_code": "UOV BSG SG",
+      "bank_address": "148 Upper Bukit Tomah Road S(588178)",
+      "payable_to": "BLU SHIPPING PTE LTD",
+      "bank_code": "7375 - 026",
+      "account_number": "347-303-823-2",
+      "tenant_address": "Blu Shipping Pte Ltd 1090 Lower Delta Road #07-02 Singapore 169201",
+      "tenant_telephone": "+65-6376-2848",
+      "tenant_fax": "+65-6274-6848",
+      "tenant_hp": "+65-8668-2493 (Operations 24hrs)",
+      "tenant_email": "agency@blushipping.com.sg"
+  }
+}

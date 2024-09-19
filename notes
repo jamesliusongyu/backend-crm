@@ -1,0 +1,39 @@
+writeToMongoDB // unexported, only visible within the package
+or
+
+WriteToMongoDB // exported
+
+
+package shapes
+
+// Public structure: accessible outside the package
+type Square struct {
+    SideLength float64
+}
+
+// Public function: accessible outside the package
+func NewSquare(length float64) *Square {
+    return &Square{SideLength: length}
+}
+
+// private function: only accessible within the 'shapes' package
+func calculateArea(s *Square) float64 {
+    return s.SideLength * s.SideLength
+}
+In another package, you could use shapes.NewSquare() but not shapes.calculateArea().
+
+This design promotes a clear and maintainable codebase by forcing developers to think about API design and data encapsulation at every step of writing a Go program.
+
+__________
+
+cmd comma to bring up settings vscode
+__________
+
+mongodb create index on ImoNumber and Tenant
+https://www.mongodb.com/docs/manual/core/index-unique/
+customer_management: tenant & customer
+vessel_management: tenant & imo_number
+agent_management: tenant & email
+terminal_management: tenant & email
+
+shipment: not sure
